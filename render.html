@@ -7,6 +7,7 @@
 		</title>
 
 		<script>
+			var pixelsPerStep = 8;
 			var renderPage = function (page) {
 				var canvas = document.getElementById("renderCanvas");
 				var ctx = canvas.getContext("2d");
@@ -15,14 +16,8 @@
 
 				ctx.fillStyle = "black";
 				for (var i = 0; i < page.length; i++) {
-					if (page[i]["highlight"] !== undefined) {
-						ctx.fillStyle = "#0f0";
-					} else {
-						ctx.fillStyle = "black";
-					}
-					var x = (page[i].x - 200) * 2.5;
-					var y = (page[i].y - 225) * 2.5;
-					ctx.fillRect(x, y, 2, 2);
+					ctx.fillStyle = "black";
+					ctx.fillRect(page[i].x * pixelsPerStep, page[i].y * pixelsPerStep, 2, 2);
 				}
 			};
 		</script>
