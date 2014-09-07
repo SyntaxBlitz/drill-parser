@@ -51,3 +51,7 @@ end
 File.open(ARGV[0] + ".json", 'w') do |file|
 	file.write(JSON.generate(spots))
 end
+
+File.open(ARGV[0] + ".js", 'w') do |file|
+	file.write("var pages="JSON.generate(spots) + ";");
+end
