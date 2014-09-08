@@ -14,7 +14,7 @@ reader = PDF::Reader.new(ARGV[0])
 text_receiver = CustomPageTextReceiver.new
 
 first_dot = {:x => 54, :y => 106}	# F3 is 54 steps from the back of the field, 106 from left (endzone)
-last_dot = {:x => 68, :y => 44}		# TS1		x and y are flipped because the drill pdf is sideways ;)
+last_dot = {:x => 68, :y => 44.06}		# TS1		x and y are flipped because the drill pdf is sideways ;)
 
 spots = []
 
